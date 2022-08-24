@@ -1,0 +1,17 @@
+table {
+    width: 50%;
+    margin: 0% 25%;
+    border: 2px solid red;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid lightcoral;
+    background-color: whitesmoke;
+    padding: 3px;
+}
+
+td {
+    border: 1px solid lightcoral;
+    padding: 3px;
+}
