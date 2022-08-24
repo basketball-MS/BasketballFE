@@ -3,6 +3,28 @@
 <table>
     <thead>
         <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Height (Ft)</th>
+            <th>Height (In)</th>
+            <th>Weight (lbs)</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let player of PlayersList"></tr>
+                <td>{{player.first_name}}</td>
+                <td>{{player.last_name}}</td>
+                <td>{{player.position}}</td>
+                <td>{{player.height_feet}}</td>
+                <td>{{player.height_inches}}</td>
+                <td>{{player.weight_pounds}}</td>
+        </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
             <th>Location</th>
             <th>Team Name</th>
             <th>Roster Size</th>
