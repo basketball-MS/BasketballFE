@@ -24,28 +24,21 @@ export class TeamsPageComponent implements OnInit {
   ]
 
   teamList: Team[] = [];
-  PlayersList: Player[] = [{
-    "id": 241,
-    "first_name": "Amir",
-    "height_feet": 6,
-    "height_inches": 9,
-    "last_name": "Johnson",
-    "position": "C-F", "weight_pounds": 240}];
+  PlayersList: Player[] = [];
   
   displayAllPlayers() {
-    //This function will need to call our HTTP Service for returning all movies
+    //This function will need to call our HTTP Service for returning all players
     this.playerHttp.getAllPlayers().subscribe(
       (response) => {
-        console.log(response);
+        //console.log(response);
 
-        this.PlayersList = response;
-        // this.movieList = [];
-        //  response.forEach(movie => {
-        //    this.movieList.push(movie);
-        //  })
+        this.PlayersList = response.data;
+        console.log(this.PlayersList[2].first_name);
 
       }
     );
   }
 
+
+  
 }

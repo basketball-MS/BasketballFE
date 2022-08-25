@@ -4,7 +4,7 @@ import { TeamsPageComponent } from './components/teams-page/teams-page.component
 
 
 const routes: Routes = [
-  { path: 'teams', component: TeamsPageComponent },
+  { path: 'teams', component: TeamsPageComponent }
 ];
 
 @NgModule({

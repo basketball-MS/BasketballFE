@@ -12,12 +12,12 @@ import { Player } from 'src/app/models/Player';
 export class PlayerHttpService {
 
   constructor(private http: HttpClient) { }
-  private postHeaders = new HttpHeaders({"content-type": "application/json"});
-  PlayerList: Player[] = [];
+  private postHeaders = new HttpHeaders({ 'Content-type': 'application/json' });
   
 
-  getAllPlayers(): Observable<Player[]> {
-    return this.http.get<Player[]>("https://www.balldontlie.io/api/v1/players");
+  getAllPlayers(): Observable<any> {
+    return this.http.get<any>("https://www.balldontlie.io/api/v1/players");
+    
   }
 
 
