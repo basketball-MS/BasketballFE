@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from 'src/app/models/Team';
-import { Player } from 'src/app/models/Player';
-import { PlayerHttpService } from 'src/app/service/player-http.service';
 
 
 @Component({
@@ -11,10 +9,9 @@ import { PlayerHttpService } from 'src/app/service/player-http.service';
 })
 export class TeamsPageComponent implements OnInit {
 
-  constructor(private playerHttp: PlayerHttpService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.displayAllPlayers();
   }
 
   fakeTeamList: Array<any> = [
@@ -24,20 +21,8 @@ export class TeamsPageComponent implements OnInit {
   ]
 
   teamList: Team[] = [];
-  PlayersList: Player[] = [];
   
-  displayAllPlayers() {
-    //This function will need to call our HTTP Service for returning all players
-    this.playerHttp.getAllPlayers().subscribe(
-      (response) => {
-        //console.log(response);
-
-        this.PlayersList = response.data;
-        console.log(this.PlayersList[2].first_name);
-
-      }
-    );
-  }
+ 
 
 
   
