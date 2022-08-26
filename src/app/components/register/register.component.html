@@ -1,1 +1,53 @@
-<p>register works!</p>
+<div>
+
+  <div>
+    <h2 class="card-header text-center">{{title}}</h2>
+  </div>
+
+  <div class="card-body">
+
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputFirstName" class="form-label">First Name</label>
+        <input [(ngModel)]="user.firstName" name="first" type="text" class="form-control" id="inputFirstName">
+      </div>
+      <div class="col-md-6">
+        <label for="inputLastName" class="form-label">Last Name</label>
+        <input [(ngModel)]="user.lastName" name="last" type="text" class="form-control" id="inputLastName">
+      </div>
+      <div class="col-md-6">
+        <label for="inputUsername" class="form-label">Username</label>
+        <input [(ngModel)]="user.username" name="username" type="text" class="form-control" id="inputUsername">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input [(ngModel)]="user.email" name="email" type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input [(ngModel)]="user.password" name="password" type="password" class="form-control" id="inputPassword4">
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputRole" class="form-label">Role</label>
+        <select [(ngModel)]="user.role" name="role" id="inputRole" class="form-select">
+          <option selected>Choose...</option>
+          <option value="">N/A</option>
+          <option value="GM">General Manager</option>
+          <option value="Coach">Coach</option>
+          <option value="Player">Player</option>
+
+        </select>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" (click)="registerUser()">Register</button>
+      </div>
+
+      <div *ngIf="clientMessage.message.length > 0" class="alert alert-secondary">
+        {{ clientMessage.message }}
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -14,6 +14,7 @@ import { CoachHomeComponent } from './components/coach-home/coach-home.component
 import { LoginComponent } from './components/login/login.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavComponent } from './components/nav/nav.component';
     PlayerHomeComponent,
     CoachHomeComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

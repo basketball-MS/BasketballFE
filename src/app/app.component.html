@@ -1,15 +1,38 @@
 <h1>Basketball Team Managemment System</h1>
 
+
+<app-nav *ngIf="isLoggedIn"></app-nav>
+
+<app-home *ngIf="!isLoggedIn"></app-home>
+
+<div class="container" *ngIf="isLoggedIn">
+
+  <div class="card border-0 my-auto w-100">
+
+    <div class="shadow-lg">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+
+  <button class="btn btn-secondary" (click)="signOut()">Log Out</button>
+
+</div>
+
+
+
 <!--
 <app-nav *ngIf="isLoggedIn"></app-nav>
 
 <app-home *ngIf="!isLoggedIn"></app-home>
 
 <div class="container" *ngIf="isLoggedIn">  -->
-  <app-nav></app-nav>
+  <!-- <app-nav></app-nav>
   <div class="card border-0 my-auto w-100">
 
-    <div class="shadow-lg">
+    <div class="shadow-lg"> -->
 
 
 <!-- <ul id="navList">
@@ -17,7 +40,8 @@
     <li routerLink='teams'>Teams</li>
 </ul> -->
 
-<router-outlet></router-outlet>
+
+<!-- <router-outlet></router-outlet>
 
 </div>
 
@@ -25,4 +49,4 @@
 
 <button class="btn btn-secondary" (click)="signOut()">Log Out</button>
 
-</div>
+</div> -->

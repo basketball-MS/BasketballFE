@@ -1,1 +1,26 @@
-<p>login would work after we have a DB to register people !</p>
+
+<div>
+
+  <div class="card-body">
+
+    <form>
+
+      <div>
+        <input [(ngModel)]="username" name="username" type="text" placeholder="Username" autocomplete="off">
+      </div>
+
+
+      <div>
+        <input [(ngModel)]="password" name="password" type="password" placeholder="Password" autocomplete="off">
+      </div>
+      <br>
+
+      <button class="btn btn-secondary" (click)="login()">Log in</button>
+
+      <p>{{loginErrMsg}}</p>
+
+    </form>
+
+  </div>
+
+</div>
