@@ -12,8 +12,8 @@ import { GMHomeComponent } from './components/gm-home/gm-home.component';
 import { PlayerHomeComponent } from './components/player-home/player-home.component';
 import { CoachHomeComponent } from './components/coach-home/coach-home.component';
 import { LoginComponent } from './components/login/login.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +24,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     GMHomeComponent,
     PlayerHomeComponent,
     CoachHomeComponent,
-    LoginComponent
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    NgbModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
