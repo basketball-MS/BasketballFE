@@ -12,7 +12,7 @@ import { GMHomeComponent } from './components/gm-home/gm-home.component';
 import { PlayerHomeComponent } from './components/player-home/player-home.component';
 import { CoachHomeComponent } from './components/coach-home/coach-home.component';
 import { LoginComponent } from './components/login/login.component';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 
@@ -33,7 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
