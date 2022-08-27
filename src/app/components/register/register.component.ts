@@ -28,7 +28,7 @@ export class RegisterComponent {
       next: (data) => {
         console.log(data);
         this.clientMessage.message = `successfully registered ${data.firstName}`
-        this.router.navigate(['/main']);
+        this.router.navigate(['/players']);
       },
       error: (error) => this.clientMessage.message = `something went wrong ${error}`,
       complete: () => console.log('complete')

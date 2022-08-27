@@ -42,7 +42,7 @@ export class LoginComponent {
         // build a token that we capture from the response headers (from Spring)
         console.log(response);
 
-        let token: string | null  = response.headers.get('rolodex-token') || '{}';
+        let token: string | null  = response.headers.get('btms-token') || '{}';
 
         // use the browser's sessionStorage to store the token
         sessionStorage.setItem('token', token);
