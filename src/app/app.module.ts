@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
+import { PersonnelPageComponent } from './components/personnel-page/personnel-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeComponent } from './components/home/home.component';
     CoachHomeComponent,
     LoginComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    PersonnelPageComponent
   ],
   imports: [
     BrowserModule,

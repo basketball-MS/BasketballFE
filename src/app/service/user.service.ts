@@ -72,13 +72,6 @@ export class UserService {
     return this.http.patch<any>(`http://localhost:5010/api/teams/change/${id}/${teamName}`, teamName, { headers: this.postHeaders })
   }
 
-  addPlayerToTeam(id: number, team_id: number): Observable<Players> {
-    return this.http.patch<any>(`http://localhost:5010/api/players/${id}/${team_id}`, team_id, { headers: this.postHeaders })
-  }
-
-  addNewPlayer(player: Players): Observable<Players> {
-    return this.http.post<any>('http://localhost:5010/api/players', player, { headers: this.postHeaders })
-  }
 
   getTeam(id: number): Observable<any> {
     return this.http.get<any>("http://localhost:5010/api/teams/1");

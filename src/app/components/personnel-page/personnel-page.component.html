@@ -1,0 +1,43 @@
+<p>personnel-page works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Height(ft)</th>
+            <th>Height(in)</th>
+            <th>Weight</th>
+            <th>PPG</th>
+            <th>APG</th>
+            <th>SPG</th>
+            <th>RPG</th>
+            <th>BPG</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let players of playersList">
+            <td>{{players.id}}</td>
+            <td>{{players.firstname}}</td>
+            <td>{{players.lastname}}</td>
+            <td>{{players.position}}</td>
+            <td>{{players.height_feets}}</td>
+            <td>{{players.height_inches}}</td>
+            <td>{{players.weight}}</td>
+            <td>{{players.ppg}}</td>
+            <td>{{players.apg}}</td>
+            <td>{{players.spg}}</td>
+            <td>{{players.rpg}}</td>
+            <td>{{players.bpg}}</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<label for="signPlayer">Sign Player</label>
+<input type="text" id="signPlayer" [(ngModel)]="playerToSign"><br>
+<button (click)="signPlayer()">Apply Changes</button><br>
+
+<label for="cutPlayer">Waive Player</label>
+<input type="number" id="cutPlayer" [(ngModel)]="playerToCut"><br>
+<button (click)="cutPlayer()">Apply Changes</button><br>

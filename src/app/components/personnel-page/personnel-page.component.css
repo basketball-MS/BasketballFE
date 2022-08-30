@@ -1,0 +1,32 @@
+table {
+    width: 50%;
+    margin: 0% 25%;
+    border: 2px solid red;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid lightcoral;
+    background-color: whitesmoke;
+    padding: 3px;
+    white-space: nowrap;
+}
+
+td {
+    border: 1px solid lightcoral;
+    padding: 3px;
+    white-space: nowrap;
+}
+
+#inputDiv {
+    text-align: left;
+    margin: 10px 25%;
+    padding: 5px 5%;
+    border: 1px solid lightcoral;
+    background-color: whitesmoke;
+}
+
+
+label {
+    margin: 0px 5px;
+}
