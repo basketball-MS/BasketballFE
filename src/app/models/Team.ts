@@ -1,24 +1,24 @@
 export class Team {
 
-    teamId: number;
+    id: number;
     location: string;
     teamName: string;
     rosterSize: number;
     gmId: number;
     winRate: number;
-    pointsPg: number;
-    pointsAgPg: number;
+    ppg: number;
+    papg: number;
 
 
-    constructor(teamId: number, location: string, teamName: string, rosterSize: number, gmId: number, winRate: number, pointsPg: number, pointsAgPg: number) {
-        this.teamId = teamId;
+    constructor(id: number, location: string, teamName: string, rosterSize: number, gmId: number, winRate: number, ppg: number, papg: number) {
+        this.id = id;
         this.location = location;
         this.teamName = teamName;
         this.rosterSize = rosterSize;
         this.gmId = gmId;
         this.winRate = winRate;
-        this.pointsPg = pointsPg;
-        this.pointsAgPg = pointsAgPg;
+        this.ppg = ppg;
+        this.papg = papg;
     }
 
 
