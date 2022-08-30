@@ -1,30 +1,24 @@
-<h3>View Roster</h3>>
-
-<table>
+<table class="table table-bordered table-striped" style="border: none;">
     <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Position</th>
-            <th>Height (Ft)</th>
-            <th>Height (In)</th>
-            <th>Weight (lbs)</th>
+            <td class="title-column">Id</td>
+            <td class="title-column">firstname</td>
+            <td class="title-column">Lastname</td>
+            <td class="title-column">Position</td>
+            <td class="title-column">Time</td>
         </tr>
     </thead>
-        <tbody>
-            <!--<tr *ngFor="let player of PlayersList">
-                <td>{{player.first_name}}</td>
-                <td>{{player.last_name}}</td>
-                <td>{{player.position}}</td>
-                <td>{{player.height_feet}}</td>
-                <td>{{player.height_inches}}</td>
-                <td>{{player.weight_pounds}}</td>
-                </tr>-->
-        </tbody>
-</table>
-
-
-<button id="createLineup" type="button">Create Lineup</button>
-<br>
-<button id="changePos" type="button">Change Player Positions</button>
+    <tr *ngFor="let players of playersList" [class.selectedRow]="rowIsSelected(players.playerId)" (click)="onRowClick(players.playerId)" style="cursor: pointer;">
+        <td class="row-left title">{{players.playerId}}</td>
+        <td class="row-mid title">{{players.firstname}}</td>
+        <td class="row-mid title">{{players.lastname}}</td>
+        <td class="row-mid title">{{players.position}}</td>
+        <td class="row-mid title">{{players.time}}</td>
+        <td><button>Update position</button></td>
+        <td><button>Update playerTime</button></td>
+       
+    </tr>
+   </table>
+  
+   <button (click)="onLogClick()">Submit</button>
 
