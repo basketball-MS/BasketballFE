@@ -18,7 +18,7 @@ export class GMHomeComponent implements OnInit {
 
   ngOnInit(): void {
       this.displayTeam();
-      this.displayCoach();
+      // this.displayCoach();
   }
 
   firstName: string = "";
@@ -122,18 +122,18 @@ addPlayer() {
 
 }
 
-displayCoach() {
+// displayCoach() {
 
 
-  this.userHttp.getThisCoach(this.cid).subscribe(
-    (response) => {
-      console.log(response);
-      this.coachList[0] = response;
+//   this.userHttp.getThisCoach(this.cid).subscribe(
+//     (response) => {
+//       console.log(response);
+//       this.coachList[0] = response;
 
-    }
-  )
+//     }
+//   )
 
 
-}
+// }
 
 }
