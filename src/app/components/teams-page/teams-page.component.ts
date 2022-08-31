@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from 'src/app/models/Team';
+import { UserService } from 'src/app/service/user.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Team } from 'src/app/models/Team';
 })
 export class TeamsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userHttp: UserService) { }
 
   ngOnInit(): void {
   }
@@ -20,9 +21,11 @@ export class TeamsPageComponent implements OnInit {
 
   ]
 
-  teamList: Team[] = [];
+  TeamList: Team[] = [];
   
- 
+ getTeams() {
+  
+ }
 
 
   

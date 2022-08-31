@@ -1,30 +1,46 @@
-<h3>View Roster</h3>>
 
-<table>
+<table class="table table-bordered table-striped" style="border: none;">
     <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Position</th>
-            <th>Height (Ft)</th>
-            <th>Height (In)</th>
-            <th>Weight (lbs)</th>
+            <td class="title-column">Id</td>
+            <td class="title-column">firstname</td>
+            <td class="title-column">Lastname</td>
+            <td class="title-column">Position</td>
+            <td class="title-column">Minutes</td>
         </tr>
     </thead>
-        <tbody>
-            <!--<tr *ngFor="let player of PlayersList">
-                <td>{{player.first_name}}</td>
-                <td>{{player.last_name}}</td>
-                <td>{{player.position}}</td>
-                <td>{{player.height_feet}}</td>
-                <td>{{player.height_inches}}</td>
-                <td>{{player.weight_pounds}}</td>
-                </tr>-->
-        </tbody>
-</table>
+    <tr *ngFor="let players of playerList" [class.selectedRow]="rowIsSelected(players.id)" (click)="onRowClick(players.id)" style="cursor: pointer;">
+        <td class="row-left title">{{players.id}}</td>
+        <td class="row-mid title">{{players.firstname}}</td>
+        <td class="row-mid title">{{players.lastname}}</td>
+        <td class="row-mid title" id="pos">{{position}}</td>
+        <td class="row-mid title" id="mins">{{minutes}}</td>
+        <td><button id="posButton" (click)="patchPosition()">Update position</button></td>
+        <td><button id="minButton" (click)="patchMinutes()">Update minutes</button></td>
 
+        <label for="updateMinutes">Assign Minutes</label>
+        <input type="number" id="updateMinutes" [(ngModel)]="minutes"><br>
+        
+        
+        <label for="updatePosition">Assign Position</label>
+        <input type="text" id="updatePosition" [(ngModel)]="position"><br>
+       
+    </tr>
+   </table>
 
-<button id="createLineup" type="button">Create Lineup</button>
-<br>
-<button id="changePos" type="button">Change Player Positions</button>
+<label for="setLineupName">Name Lineup</label>
+<input type="text" id="setLineupName" [(ngModel)]="name"><br>
+<label for="selectPlayer1">Select Player1 By ID</label>
+<input type="number" id="selectPlayer1" [(ngModel)]="selectPlayer1"><br>
+<label for="selectPlayer2">Select Player2 By ID</label>
+<input type="number" id="selectPlayer2" [(ngModel)]="selectPlayer2"><br>
+<label for="selectPlayer3">Select Player3 By ID</label>
+<input type="number" id="selectPlayer3" [(ngModel)]="selectPlayer3"><br>
+<label for="selectPlayer4">Select Player4 By ID</label>
+<input type="number" id="selectPlayer4" [(ngModel)]="selectPlayer4"><br>
+<label for="selectPlayer5">Select Player5 By ID</label>
+<input type="number" id="selectPlayer5" [(ngModel)]="selectPlayer5"><br>
+  
+   <button (click)="postLineup()">Confirm Lineup</button>
+   <p>{{successMsg}}</p>
 
