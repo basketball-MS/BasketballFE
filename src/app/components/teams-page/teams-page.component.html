@@ -5,6 +5,7 @@
 <table>
     <thead>
         <tr>
+            <th>Team ID</th>
             <th>Location</th>
             <th>Team Name</th>
             <!-- <th>Roster Size</th> -->
@@ -15,6 +16,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let team of fakeTeamList">
+            <td>{{team.teamId}}</td>
             <td>{{team.location}}</td>
             <td>{{team.teamName}}</td>
             <!-- <td>{{team.rosterSize}}</td> -->
@@ -22,5 +24,13 @@
             <td>{{team.pointsPg}}</td>
             <td>{{team.pointsAgPg}}</td>
         </tr>
+        <!-- <tr *ngFor="let team of TeamList"></tr>
+            <td>{{team.location}}</td>
+            <td>{{team.teamName}}</td> -->
+            <!-- <td>{{team.rosterSize}}</td> -->
+            <!-- <td>{{team.winRate}}</td>
+            <td>{{team.ppg}}</td>
+            <td>{{team.papg}}</td>
+        </tr> -->
     </tbody>
 </table>

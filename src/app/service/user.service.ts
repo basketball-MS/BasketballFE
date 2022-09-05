@@ -80,6 +80,10 @@ export class UserService {
   getThisCoach(cid: number): Observable<any> {
     return this.http.get<any>(`http://localhost:5010/api/users/${cid}`);
   }
+
+  getAllTeams(): Observable<any> {
+    return this.http.get<any>("http://localhost:5010/api/teams");
+  }
   
 
 

@@ -1,4 +1,4 @@
-<p>personnel-page works!</p>
+<h3>My Players</h3>
 <table>
     <thead>
         <tr>
@@ -34,10 +34,28 @@
     </tbody>
 </table><br>
 
-<label for="signPlayer">Sign Player</label>
-<input type="text" id="signPlayer" [(ngModel)]="playerToSign"><br>
-<button (click)="signPlayer()">Apply Changes</button><br>
+<!-- <label for="signPlayer">Sign/Trade Player By ID</label>
+<input type="number" id="signPlayer" [(ngModel)]="playerToSign"><br> -->
 
-<label for="cutPlayer">Waive Player</label>
+
+<label for="cutPlayer">Waive Player By ID</label>
 <input type="number" id="cutPlayer" [(ngModel)]="playerToCut"><br>
 <button (click)="cutPlayer()">Apply Changes</button><br>
+
+<label for="selectPlayer">Select Player By ID</label>
+<input type="number" id="selectPlayer" [(ngModel)]="selectPlayer"><br>
+<label for="newTeamId">Select Team ID</label>
+<input type="number" id="newTeamId" [(ngModel)]="newTeamId"><br>
+<button (click)="changePlayerTeam()">Apply Changes</button><br>
+
+<label for="changePlayerWeight">Update Player Weight</label>
+<input type="number" id="changePlayerWeight" [(ngModel)]="newWeight"><br>
+<button (click)="updatePlayerWeight(); displayPlayer();">Apply Changes</button><br>
+
+<label for="changePlayerHeightFt">Update Player Height(ft)</label>
+<input type="number" id="changePlayerHeightFt" [(ngModel)]="newHeightFt"><br>
+<button (click)="updatePlayerHtFt(); displayPlayer();">Apply Changes</button><br>
+
+<label for="changePlayerHeightIn">Update Player Height(in)</label>
+<input type="number" id="changePlayerHeightIn" [(ngModel)]="newHeightIn"><br>
+<button (click)="updatePlayerHtIn(); displayPlayer();">Apply Changes</button><br>
