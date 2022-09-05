@@ -6,6 +6,7 @@
             <td class="title-column">firstname</td>
             <td class="title-column">Lastname</td>
             <td class="title-column">Position</td>
+
             <td class="title-column">Minutes</td>
         </tr>
     </thead>
@@ -43,4 +44,21 @@
   
    <button (click)="postLineup()">Confirm Lineup</button>
    <p>{{successMsg}}</p>
+
+            <td class="title-column">Time</td>
+        </tr>
+    </thead>
+    <tr *ngFor="let players of playersList" [class.selectedRow]="rowIsSelected(players.playerId)" (click)="onRowClick(players.playerId)" style="cursor: pointer;">
+        <td class="row-left title">{{players.playerId}}</td>
+        <td class="row-mid title">{{players.firstname}}</td>
+        <td class="row-mid title">{{players.lastname}}</td>
+        <td class="row-mid title">{{players.position}}</td>
+        <td class="row-mid title">{{players.time}}</td>
+        <td><button>Update position</button></td>
+        <td><button>Update playerTime</button></td>
+       
+    </tr>
+   </table>
+  
+   <button (click)="onLogClick()">Submit</button>
 

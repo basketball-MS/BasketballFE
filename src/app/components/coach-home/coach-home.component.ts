@@ -27,6 +27,7 @@ export class CoachHomeComponent implements OnInit {
     ];
   
     selectedId: string;
+
     position: string = "";
     minutes: number = 0;
     selector: number = 0;
@@ -53,7 +54,9 @@ export class CoachHomeComponent implements OnInit {
     }
   
     getSelectedRows(){
+
       return this.playerList.filter(x => this.selectedRowIds.has(x.id));
+
     }
   
     onLogClick() {
